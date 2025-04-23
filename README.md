@@ -1,6 +1,9 @@
 # AI LLM MCP Demo
 
 ## Overview
+MCP Demo using Ollama LLM (locally hosted LLM) and Java Spring Boot. 
+The demo is a simple chat bot that can answer questions about the current date, time, and month. 
+It also has a feature to get expense for the current month.
 
 ## Prerequisites
 - Java 21
