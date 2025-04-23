@@ -1,7 +1,7 @@
 # AI LLM MCP Demo
 
 ## Overview
-This project demonstrates an **MCP (Model Control Plane)** using **Ollama LLM** (a locally hosted LLM) and **Java Spring Boot**.  
+This project demonstrates an **MCP (Model Context Protocol)** using **Ollama** (a locally hosted LLM) and **Java Spring Boot**.  
 The demo features a simple chatbot that can answer questions about:
 - The current date, time, and month.
 - Expenses for the current month.
