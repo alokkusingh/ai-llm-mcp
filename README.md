@@ -1,15 +1,22 @@
 # AI LLM MCP Demo
 
 ## Overview
-MCP Demo using Ollama LLM (locally hosted LLM) and Java Spring Boot. 
-The demo is a simple chat bot that can answer questions about the current date, time, and month. 
-It also has a feature to get expense for the current month.
+This project demonstrates an **MCP (Model Control Plane)** using **Ollama LLM** (a locally hosted LLM) and **Java Spring Boot**.  
+The demo features a simple chatbot that can answer questions about:
+- The current date, time, and month.
+- Expenses for the current month.
+
+---
 
 ## Prerequisites
-- Java 21
-- Ollama is installed
+- **Java 21**
+- **Ollama** installed on your system
 
-## Build
+---
+
+## Build Instructions
+To build the project, run the following command:
+
 ```shell
 mvn clean package -DskipTests
 ```
@@ -19,6 +26,7 @@ mvn clean package -DskipTests
 ```shell
 ollama serve
 ```
+
 ### Stop
 ```shell
 ps -ef | grep "ollama serve" |grep -v "grep"| awk '{print $2}' | xargs kill -9
