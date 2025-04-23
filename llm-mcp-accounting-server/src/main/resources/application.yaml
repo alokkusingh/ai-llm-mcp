@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: llm-mcp-accounting-server
+
+  ai:
+    mcp:
+      server:
+        name: accounting-tools-server
+        version: 1.0.0
+        type: SYNC
+        stdio: false
+        base-url: /api/v1
+        sse-endpoint: /sse
+        sse-message-endpoint: /mcp/messages
+
+server:
+  port: 8087

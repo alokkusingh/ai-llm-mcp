@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: llm-mcp-host
+  ai:
+#    anthropic:
+#      api-key: ${ANTHROPIC_API_KEY}
+#      chat:
+#        options:
+#          model: claude-3-7-sonnet-20250219
+    ollama:
+      base-url: http://localhost:11434
+      init:
+        pull-model-strategy: WHEN_MISSING
+        timeout: 5m
+        max-retries: 1
+      chat:
+        model: llama3.2
+
+    mcp:
+      client:
+        name: author-tools-client
+        version: 1.0.0
+        type: SYNC
+        request-timeout: 30s
+        stdio:
+          root-change-notification: true
+          connections:
+#            brave-search:
+#              command: npx
+#              args:
+#                - "-y"
+#                - "@modelcontextprotocol/server-brave-search"
+#              env:
+#                BRAVE_API_KEY: ${BRAVE_API_KEY}
+            filesystem:
+              command: npx
+              args:
+                - "-y"
+                - "@modelcontextprotocol/server-filesystem"
+                - "./"
+
+        sse:
+          connections:
+#            author-tools-server:
+#              url: http://localhost:8086
+            accounting-tools-server:
+              url: http://localhost:8087
+            realworld-tools-server:
+              url: http://localhost:8088
+server:
+  port: 8085
